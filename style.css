@@ -1,0 +1,97 @@
+.people {
+  display: grid;
+  grid-template-columns: repeat(4, 223px);
+  grid-template-rows: repeat(3, 231px);
+  grid-column-gap: 30px;
+  grid-row-gap: 40px;
+  justify-content: center;
+  margin: 30px 0 100px;
+}
+
+.person {
+  position: relative;
+  height: 231px;  
+  cursor: pointer;
+  transition: 1s;
+  text-align: center;
+}
+
+.person:hover {
+  z-index: 10;
+  transform: scale(1.2);
+  transform-origin: center;
+  border-radius: 12px;
+  height: 280px;  
+  background-color: #EEEEEE;
+}
+
+.photo > img {
+  margin: 12px 12px 9px 12px;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  transition-duration: 1s;
+}
+
+.person:hover img{
+  border-radius: 60px;
+}
+
+.rank {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 32px;
+  height: 32px;
+  left: 158px;
+  top: 91px;
+
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  font-family: Arial;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 600;
+  color: #8B0000;
+  transition: 1s linear;
+}
+
+.details {
+  text-align: center;
+}
+
+.name {
+  font-family: Arial;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 600;
+  color: #2F4F4F;
+  transition: 1s;
+}
+
+.person:hover .name{
+  transform: scale(1.2);
+}
+
+
+.extra {
+  font-family: Arial;
+  font-size: 21.6px;
+  line-height: 25px;
+  text-align: center;
+  color: #000000;
+  opacity: 0;
+}
+
+.person:hover .extra {
+  opacity: 1;
+}
+
+@media (max-width:999px) {
+  .people {
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(5, 231px);
+  }
+}
